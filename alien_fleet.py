@@ -6,6 +6,8 @@ Starter code from https://github.com/RedBeard41/alien_Invasion_starter
 July 25, 2026
 """
 
+#TO DO (milestone 2): build based on height of screen, fewer sideways
+
 import pygame
 from alien import Alien
 from typing import TYPE_CHECKING
