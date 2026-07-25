@@ -14,8 +14,10 @@ if TYPE_CHECKING:
     from alien_fleet import AlienFleet
 
 class Alien(Sprite):
+    """create and move an alien within the boundaries"""
     
     def __init__(self, fleet: 'AlienFleet', x: float, y: float):
+        """load alien at a location as part of a fleet"""
 
         super().__init__()
         self.fleet = fleet
@@ -35,14 +37,17 @@ class Alien(Sprite):
         self.x = float(self.rect.x)
 
     def update(self):
+        """decide and set new position"""
         speed = self.settings.fleet_speed
 
-        self.x += speed * self.fleet.fleet_direction
+        self.y += speed * self.fleet.fleet_direction
         self.rect.x = self.x
         self.rect.y = self.y
 
     def check_edges(self):
-        return ((self.rect.right >= self.boundaries.right) or (self.rect.left <= self.boundaries.left))
+        """is touching top or bottom of screen?"""
+        return ((self.rect.bottom >= self.boundaries.bottom) or (self.rect.top <= self.boundaries.top))
     
     def draw_alien(self):
+        """draw to screen"""
         self.screen.blit(self.image, self.rect)
