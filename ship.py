@@ -1,3 +1,11 @@
+"""
+Alien (cat) Invasion - Track 1
+Daniel Shiloh
+Create user-controlled ship with up/down movement
+Starter code from https://github.com/RedBeard41/alien_Invasion_starter
+July 25, 2026
+"""
+
 import pygame
 from typing import TYPE_CHECKING
 
@@ -7,8 +15,10 @@ if TYPE_CHECKING:
 
 
 class Ship:
+    """create ship that moves up and down on the left side of the screen"""
 
     def __init__(self, game: 'AlienInvasion', arsenal: 'Arsenal'):
+        """load ship to left center of screen"""
 
         self.game = game
         self.settings = game.settings
@@ -21,38 +31,42 @@ class Ship:
             )
         self.rect = self.image.get_rect()
         self._center_ship()
-        self.moving_right = False
-        self.moving_left = False
+        self.moving_down = False
+        self.moving_up = False
         self.arsenal = arsenal
 
     def _center_ship(self):
-        self.rect.midbottom = self.boundaries.midbottom
-        self.x = float(self.rect.x)
+        """set ship loc to left side, centered"""
+        self.rect.midleft = self.boundaries.midleft
+        self.y = float(self.rect.y)
 
     def update(self):
-
+        """update ship loc and bullet quantity"""
         self._update_ship_movement()
         self.arsenal.update_arsenal()
 
     def _update_ship_movement(self):
-
+        """move up/down if not touching boundary"""
         speed = self.settings.ship_speed
 
-        if self.moving_right and self.rect.right < self.boundaries.right:
-            self.x += speed
-        if self.moving_left and self.rect.left > self.boundaries.left:
-            self.x -= speed
+        if self.moving_down and self.rect.bottom < self.boundaries.bottom:
+            self.y += speed
+        if self.moving_up and self.rect.top > self.boundaries.top:
+            self.y -= speed
         
-        self.rect.x = self.x
+        self.rect.y = self.y
 
     def fire(self):
+        """shoot bullet"""
         return self.arsenal.fire_bullet()
 
     def draw(self):
+        """draw bullet and ship to screen"""
         self.arsenal.draw()
         self.screen.blit(self.image, self.rect)
 
     def check_collisions(self, other_group):
+        """is ship/alien collision?"""
         if pygame.sprite.spritecollideany(self, other_group):
             self._center_ship()
             return True

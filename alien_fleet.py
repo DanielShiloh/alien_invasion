@@ -14,6 +14,7 @@ if TYPE_CHECKING:
     from alien_invasion import AlienInvasion
 
 class AlienFleet:
+    """create set of aliens that move within boundaries"""
 
     def __init__(self, game: 'AlienInvasion'):
         """set up and create fleet"""
