@@ -7,7 +7,7 @@ class Settings:
         """static settings"""
         self.name: str = "Alien (cat) Invasion - Track 1"
         self.screen_w = 800
-        self.screen_h = 1200
+        self.screen_h = 800
         self.fps = 30
         self.bg_file = Path.cwd() / 'Assets' / 'images' / 'Starbasesnow.png'
         self.difficulty_scale = 1.2
@@ -37,12 +37,12 @@ class Settings:
 
     def initialize_dynamic_settings(self):
         """dynamic / potentially-dynamic settings"""
-        self.ship_speed = 5
+        self.ship_speed = 8
         self.starting_ship_count = 3
         
         self.bullet_w = 27
         self.bullet_h = 46
-        self.bullet_speed = 7
+        self.bullet_speed = 8
         self.bullet_amount = 8
         
         self.fleet_speed = 5
