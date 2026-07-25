@@ -1,7 +1,7 @@
 """
 Alien (cat) Invasion - Track 1
 Daniel Shiloh
-Create a ship that fires bullets from an arsenal at aliens in a fleet, starting with a button, saving game stats, basd on settings and requirements.
+Create a ship that fires bullets from an arsenal at aliens in a fleet, starting with a button, saving game stats, based on settings and requirements.
 Starter code from https://github.com/RedBeard41/alien_Invasion_starter
 July 25, 2026
 """
@@ -173,8 +173,7 @@ class AlienInvasion:
         elif event.key == pygame.K_UP:
             self.ship.moving_up = False
 
-
-
+            
 if __name__ == '__main__':
     ai = AlienInvasion()
     ai.run_game()
