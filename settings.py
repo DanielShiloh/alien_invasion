@@ -3,10 +3,10 @@ from pathlib import Path
 class Settings:
 
     def __init__(self):
-        self.name: str = "Alien Invasion"
-        self.screen_w = 1200
-        self.screen_h = 800
-        self.fps = 60
+        self.name: str = "Alien (cat) Invasion - Track 1"
+        self.screen_w = 800
+        self.screen_h = 1200
+        self.fps = 30
         self.bg_file = Path.cwd() / 'Assets' / 'images' / 'Starbasesnow.png'
         self.difficulty_scale = 1.1
         self.scores_file = Path.cwd() / 'Assets' / 'file' / 'scores.json'
@@ -15,13 +15,13 @@ class Settings:
         self.ship_w = 40
         self.ship_h = 60
 
-        self.bullet_file = Path.cwd() / 'Assets' / 'images' / 'laserBlast.png'
+        self.bullet_file = Path.cwd() / 'Assets' / 'images' / 'mouse.png'
         self.laser_sound = Path.cwd() / 'Assets' / 'sound' / 'laser.mp3'
         self.impact_sound = Path.cwd() / 'Assets' / 'sound' / 'impactSound.mp3'
 
-        self.alien_file = Path.cwd() / 'Assets' / 'images' / 'enemy_4.png'
-        self.alien_w = 40
-        self.alien_h = 40
+        self.alien_file = Path.cwd() / 'Assets' / 'images' / 'cat.png'
+        self.alien_w = 46
+        self.alien_h = 49
         self.fleet_direction = 1
 
         self.button_w = 200

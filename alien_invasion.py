@@ -1,3 +1,11 @@
+"""
+Alien (cat) Invasion - Track 1
+Daniel Shiloh
+Create a ship that fires bullets from an arsenal at aliens in a fleet, starting with a button, saving game stats, basd on settings and requirements.
+Starter code from https://github.com/RedBeard41/alien_Invasion_starter
+July 25, 2026
+"""
+
 import sys
 import pygame
 from settings import Settings

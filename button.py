@@ -1,3 +1,11 @@
+"""
+Alien (cat) Invasion - Track 1
+Daniel Shiloh
+Create play button
+Starter code from https://github.com/RedBeard41/alien_Invasion_starter
+July 25, 2026
+"""
+
 import pygame.font
 from typing import TYPE_CHECKING
 

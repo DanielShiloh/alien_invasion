@@ -1,3 +1,11 @@
+"""
+Alien (cat) Invasion - Track 1
+Daniel Shiloh
+Define text and stats to show on screen
+Starter code from https://github.com/RedBeard41/alien_Invasion_starter
+July 25, 2026
+"""
+
 import pygame.font
 from typing import TYPE_CHECKING
 

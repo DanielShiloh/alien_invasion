@@ -1,3 +1,11 @@
+"""
+Alien (cat) Invasion - Track 1
+Daniel Shiloh
+Track score, lives, level
+Starter code from https://github.com/RedBeard41/alien_Invasion_starter
+July 25, 2026
+"""
+
 from pathlib import Path
 import json
 from typing import TYPE_CHECKING

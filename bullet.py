@@ -1,3 +1,11 @@
+"""
+Alien (cat) Invasion - Track 1
+Daniel Shiloh
+Create bullets to fire
+Starter code from https://github.com/RedBeard41/alien_Invasion_starter
+July 25, 2026
+"""
+
 import pygame
 from pygame.sprite import Sprite
 from typing import TYPE_CHECKING
