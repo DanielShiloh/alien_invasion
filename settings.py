@@ -27,7 +27,7 @@ class Settings:
         self.fleet_direction = 1
 
         self.button_w = 200
-        self.button_h = 50
+        self.button_h = 100
         self.button_color = (0,50,150)
 
         self.text_color = (255,255,255)
@@ -40,8 +40,8 @@ class Settings:
         self.ship_speed = 8
         self.starting_ship_count = 3
         
-        self.bullet_w = 27
-        self.bullet_h = 46
+        self.bullet_w = 46
+        self.bullet_h = 27
         self.bullet_speed = 8
         self.bullet_amount = 8
         

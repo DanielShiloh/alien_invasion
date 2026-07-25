@@ -14,8 +14,10 @@ if TYPE_CHECKING:
     from alien_invasion import AlienInvasion
 
 class Bullet(Sprite):
+    """Create bullet to be fired from ship"""
     
     def __init__(self, game: 'AlienInvasion'):
+        """load bullet, start at right edge of ship"""
 
         super().__init__()
         self.screen = game.screen
@@ -27,12 +29,14 @@ class Bullet(Sprite):
             )
         
         self.rect = self.image.get_rect()
-        self.rect.midtop = game.ship.rect.midtop
-        self.y = float(self.rect.y)
+        self.rect.midright = game.ship.rect.midright
+        self.x = float(self.rect.x)
 
     def update(self):
-        self.y -= self.settings.bullet_speed
-        self.rect.y = self.y
+        """move bullet right"""
+        self.x += self.settings.bullet_speed
+        self.rect.x = self.x
     
     def draw_bullet(self):
+        """draw bullet to screen"""
         self.screen.blit(self.image, self.rect)
