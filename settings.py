@@ -42,7 +42,7 @@ class Settings:
         
         self.bullet_w = 46
         self.bullet_h = 27
-        self.bullet_speed = 8
+        self.bullet_speed = 10
         self.bullet_amount = 8
         
         self.fleet_speed = 5
@@ -55,3 +55,4 @@ class Settings:
         self.ship_speed *= self.difficulty_scale
         self.bullet_speed *= self.difficulty_scale
         self.fleet_speed *= self.difficulty_scale
+        self.alien_points *= self.difficulty_scale
